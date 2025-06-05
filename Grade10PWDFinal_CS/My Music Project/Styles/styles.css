@@ -1,0 +1,75 @@
+/* CSS Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the body*/
+body {
+    font-family: LasVegasJackpot;
+    color: #ffff00;
+    margin: 2em;
+    background-image: url(../Media/despicable_me_2_cover.jpg);
+    background-color: hsl(180, 100%, 50%);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+/* Styles for the header */
+header {
+    background-color: hsla(240, 100%, 50%, 0.6);
+    text-align: center;
+    & h1 {
+        font-size: 500%;
+    }
+}
+
+/* Styles for pre elements */
+pre {
+    font-size: 24px;
+    font-family: LasVegasJackpot;
+    color: orange;
+    text-shadow: maroon 1px 1px;
+}
+
+/* When pre elements selected */
+pre::selection {
+    font-size: 32;
+    color: red;
+}
+
+/* Styles for h6 elements in the footer */
+footer h6 {
+    font-size: 100%;
+    padding: 16px;
+    border-left: dotted purple 4px;
+    margin: 4px;
+}
+
+/* trivia styles */
+
+.trivia {
+    font-size: 24px;
+    color: green;
+    padding: 2em;
+    border: double blue 5px;
+    margin: 5em;
+    box-shadow: black 3px 3px;
+}
+
+#centered {
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .trivia {
+        padding: 1em;
+        margin: 2em;
+    }
+}
+
+@font-face {
+    font-family: LasVegasJackpot;
+    src: url("lasvegas-jackpot.ttf")
+}

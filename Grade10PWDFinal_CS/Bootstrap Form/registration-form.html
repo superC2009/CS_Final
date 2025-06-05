@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <style>
+        button[type="submit"]:hover ~ #notice {
+            visibility: visible !important;
+        }
+    </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="font-size: 16px; font-family: 'Times New Roman', Times, serif;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Charles' Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="../Website_CS/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="../My Music Project/index.html">Music</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Send an email!</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 style="margin: 50px;">NT Student Form</h1>
+    <form method="POST" action="mailto:cegan@nashobatech.net" enctype="text/plain">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label for="InputName" class="form-label">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="InputName" placeholder="Gabe Newell">
+                </div>
+                <div class="col">
+                    <label for="InputEmail" class="form-label">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="InputEmail" placeholder="samplemail@gmail.com">
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="InputTel" class="form-label">Phone Number</label>
+                        <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" name="phone#" class="form-control" id="InputTel" placeholder="123 456 7890">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="DoB">Date Of Birth</label>
+                        <input type="date" name="born on" class="form-control" id="DoB">
+                    </div>
+                    <div class="col">
+                        <label for="grade" class="form-label">Grade Level:</label>
+                        <select name="grade" id="grade">
+                            <option value="nine">9</option>
+                            <option value="ten">10</option>
+                            <option value="eleven">11</option>
+                            <option value="twelve">12</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label class="form-label" for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <p style="padding: 1px;">Pick as many as you want:</p>
+                        <input type="checkbox" id="math" name="math" value="math">
+                        <label for="vehicle1"> I love Math! </label><br>
+                        <input type="checkbox" id="ela" name="vehicle2" value="ela">
+                        <label for="ela"> I love ELA! </label><br>
+                        <input type="checkbox" id="history" name="history" value="history">
+                        <label for="vehicle3"> I love History! </label><br><br>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label" for="color">Pick a Color:</label>
+                        <input type="color" id="color" name="color">
+                    </div>
+                    <div class="col-md-7">
+                        <label class="form-label" for="comment">Leave a Comment</label>
+                        <textarea class="form-control" placeholder="Type some stuff" name="comment" id="comment" rows="3" cols="50"></textarea>
+                    </div>
+                </div>
+            <fieldset>
+                <div class="row">
+                <div class="col-md-1">
+                    <button type="submit" class="btn btn-success" id="SubmitButton">Submit</button>
+                    <h5 id="notice" style="font-size: 13px; visibility: hidden"> This button does <strong>not</strong> submit info unless fully filled out with no errors! </h5>
+                </div>
+                <div class="col-md-11">
+                    <button type="reset" class="btn btn-danger" id="ResetButton">Reset</button>
+                </div>
+                </div>
+
+                <div style="margin: 20px;" class="row">
+                    <div style="text-align: center;" class="alert collapse alert-success" role="alert" id="conf-alert">
+                        <strong>Thank you!</strong> We will contact you soon!
+                     </div>
+                </div>
+            </fieldset>
+        </div>
+      </form>
+  </body>
+</html>
